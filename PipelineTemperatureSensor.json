@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "defaultName": "Датчик температуры для трубопроводов",
+        "description": "Датчик температуры для трубопроводов",
+        "version": "0.0.1",
+        "author": "Эпов А.Г."
+    },
+    "styleParameters": [
+        {
+            "name": "General",
+            "text": "Общие",
+            "params": [
+                {
+                    "name": "Material",
+                    "text": "Материал",
+                    "type": "Id",
+                    "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+                },
+                {
+                    "name": "PipeDiameter",
+                    "text": "Диаметр трубопровода",
+                    "type": "Length",
+                    "default": "100",
+                    "min": "25",
+                    "max": "10000"
+                },
+                {
+                    "name": "MountingOptions",
+                    "text": "Вариант монтажа",
+                    "type": "UserEnum",
+                    "default": "Direct",
+                    "items": [
+                        {
+                            "key": "Direct",
+                            "text": "Прямой монтаж"
+                        },
+                        {
+                            "key": "Angle",
+                            "text": "Монтаж под углом 45°"
+                        }
+                    ]
+                },
+                {
+                    "name": "MovableRod",
+                    "text": "Подвижный шток",
+                    "type": "Boolean",
+                    "default": "false"
+                }
+            ]
+        }
+    ],
+    "ports": [
+        {
+            "name": "PipeInlet",
+            "text": "Трубопроводный вход",
+            "flowDirection": "Inlet",
+            "portRole":"TransitPort",
+            "systemCategories": [
+                "DomesticColdWater",
+                "DomesticHotWater",
+                "Heating",
+                "IndustrialColdWater",
+                "IndustrialHotWater",
+                "OtherPipeSystem"                
+            ]
+        },
+        {
+            "name": "PipeOutlet",
+            "text": "Трубопроводный выход",
+            "flowDirection": "Outlet",
+            "portRole":"TransitPort",
+            "systemCategories": [
+                "DomesticColdWater",
+                "DomesticHotWater",
+                "Heating",
+                "IndustrialColdWater",
+                "IndustrialHotWater",
+                "OtherPipeSystem"
+            ]
+        },
+        {
+            "name": "ElectricPort",
+            "text": "Для подключения электричества",
+            "flowDirection": "InletAndOutlet",
+            "portRole": "EndPort",
+            "systemCategories": [
+                "OtherElectricalSystem"
+            ]
+        }
+]
+}
