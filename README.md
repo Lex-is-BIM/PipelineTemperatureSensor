@@ -1,0 +1,2 @@
+# PipelineTemperatureSensor
+ Датчик температуры трубопроводный
