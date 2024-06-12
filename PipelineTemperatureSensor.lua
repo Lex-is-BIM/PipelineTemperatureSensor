@@ -83,7 +83,6 @@ end
 
 Style.SetSymbolGeometry(ModelGeometry():AddGeometrySet2D(symb(2.5,0)))
 Style.SetSymbolicGeometry(ModelGeometry():AddGeometrySet2D(symb(100,rPipe)))
-
 Style.GetPort("PipeInlet"):SetPlacement(pipePlac(-1))
 Style.GetPort("PipeOutlet"):SetPlacement(pipePlac(1))
 Style.GetPort("ElectricPort"):SetPlacement(outPlac:Transform(matrixBody))
